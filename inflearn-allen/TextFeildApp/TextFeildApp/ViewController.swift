@@ -60,10 +60,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let maxLength = 10
         let nsString = NSString(string: textField.text ?? "")
         let newString = nsString.replacingCharacters(in: range, with: string)
-        return newString.count < maxLength
+        
+        return newString.unicodeScalars.count <= maxLength
     }
     
-    // 입력이 들어올 때마다 호출된다.
+    // 입력이 들어온 후 위 함수가 호출된 이후에 호출된다.
     func textFieldDidChangeSelection(_ textField: UITextField) {
         print(#function)
     }

@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     
     // 1) 코드로 화면 이동 (다음화면이 코드로 작성되어있을때만 가능한 방법)
     @IBAction func codeNextButtonTapped(_ sender: UIButton) {
-
+        let firstVC = FirstViewController()
+        firstVC.labelStr = "seding data"
+        firstVC.modalPresentationStyle = .fullScreen
         
-        
-        
+        present(firstVC, animated: true)
         
     }
     

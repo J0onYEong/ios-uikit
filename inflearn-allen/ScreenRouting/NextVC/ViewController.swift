@@ -27,11 +27,12 @@ class ViewController: UIViewController {
     
     // 2) 코드로 스토리보드 객체를 생성해서, 화면 이동
     @IBAction func storyboardWithCodeButtonTapped(_ sender: UIButton) {
-
-        
-        
-        
-        
+        if let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? SecondViewController {
+            
+            secondVC.labelStr = "데이터"
+            
+            present(secondVC, animated: true)
+        }
     }
     
     

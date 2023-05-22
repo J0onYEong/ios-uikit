@@ -39,15 +39,28 @@ class ViewController: UIViewController {
     
     // 3) 스토리보드에서의 화면 이동(간접 세그웨이)
     @IBAction func storyboardWithSegueButtonTapped(_ sender: UIButton) {
-        
-
-        
-        
-        
-        
+        performSegue(withIdentifier: "toThirdVC", sender: self)
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toThirdVC" {
+            let vc = segue.destination as! ThirdViewController
+            vc.labelStr = "전달하고싶은 데이터"
+        }
+        
+        if segue.identifier == "toFourthVC" {
+            let vc = segue.destination as! FourthViewController
+            vc.labelStr = "전달하고 싶어용"
+        }
+    }
     
+    // 4) 직접 세그웨이
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "toFourthVC" {
+            return true
+        }
+        return false
+    }
+
 }
 

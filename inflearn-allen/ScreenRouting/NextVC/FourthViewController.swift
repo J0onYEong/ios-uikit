@@ -11,16 +11,17 @@ class FourthViewController: UIViewController {
 
     @IBOutlet weak var mainLabel: UILabel!
     
+    var labelStr: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainLabel.text = labelStr
         
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-
-        
+        dismiss(animated: true)
     }
     
     

@@ -15,9 +15,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dismissButton: UIButton!
     
     
-    var bmi: Double?
-    var adviceString: String?
-    var bmiColor: UIColor?
+    var bmi: BMI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +32,12 @@ class SecondViewController: UIViewController {
         //Label
         label1.text = "BMI결과값"
         
-        label2.backgroundColor = bmiColor
+        label2.backgroundColor = bmi?.color
         label2.clipsToBounds = true
         label2.layer.cornerRadius = 8
-        label2.text = String(bmi ?? 0.0)
+        label2.text = String(bmi?.value ?? 0.0)
         
-        label3.text = adviceString ?? ""
+        label3.text = bmi?.advice ?? ""
         
     }
 

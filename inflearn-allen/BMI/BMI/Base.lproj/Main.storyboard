@@ -86,7 +86,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1EP-e6-pu4"/>
                                     <segue destination="jKt-Dv-lUs" kind="presentation" identifier="moveToBMI" modalPresentationStyle="fullScreen" id="A9t-cC-h6J"/>
                                 </connections>
                             </button>
@@ -105,7 +104,7 @@
                     <connections>
                         <outlet property="heightTextField" destination="qEd-jR-aht" id="U6Q-gg-95r"/>
                         <outlet property="mainLabel" destination="foc-an-YEL" id="T15-za-Wk9"/>
-                        <outlet property="nextButton" destination="eAQ-K5-DY2" id="YPL-Zi-eD8"/>
+                        <outlet property="nextButton" destination="eAQ-K5-DY2" id="JIi-sQ-BMt"/>
                         <outlet property="weightTextField" destination="rZg-mO-17X" id="r5R-XK-2zu"/>
                     </connections>
                 </viewController>
